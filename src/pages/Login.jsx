@@ -13,24 +13,24 @@ const Login = () => {
   });
   const { email, password } = inputValue;
 
-  // useEffect(() => {
-  //   const verifyCookie = async () => {
-  //     if (!cookies.token) {
-  //       navigate("/login");
-  //     }
-  //     const { data } = await axios.post(
-  //       "http://localhost:4000",
-  //       {},
-  //       { withCredentials: true }
-  //     );
-  //     // const { status, isAdmin } = data;
-  //     // setUsername(user);
-  //     return data.status
-  //       ? navigate('/')
-  //       : (removeCookie("token"), navigate("/login"));
-  //   };
-  //   verifyCookie();
-  // }, [])
+  useEffect(() => {
+    const verifyCookie = async () => {
+      if (!cookies.token) {
+        navigate("/login");
+      }
+      const { data } = await axios.post(
+        "http://localhost:4000",
+        {},
+        { withCredentials: true }
+      );
+      // const { status, isAdmin } = data;
+      // setUsername(user);
+      return data.status
+        ? navigate('/')
+        : (removeCookie("token"), navigate("/login"));
+    };
+    verifyCookie();
+  }, [])
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
