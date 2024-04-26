@@ -30,7 +30,7 @@ const Login = () => {
         : (removeCookie("token"), navigate("/login"));
     };
     verifyCookie();
-  }, [])
+  })
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
