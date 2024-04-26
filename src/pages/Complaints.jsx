@@ -27,7 +27,7 @@ const Complaints = () => {
         try {
             const token = cookies.token;
             // console.log(pickupDate);
-            const { data } = await axios.post("http://localhost:4000/request",
+            const { data } = await axios.post("https://trash-tracker-gb4c.onrender.com/request",
                 {
                     ...inputValue
                 },

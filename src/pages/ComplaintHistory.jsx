@@ -15,7 +15,7 @@ const ComplaintHistory = () => {
 
     const fetchComplaints = async () => {
         const token = cookies.token;
-        const res = await axios.get('http://localhost:4000/request/history', {
+        const res = await axios.get('https://trash-tracker-gb4c.onrender.com/request/history', {
             headers: {
                 Authorization: `Bearer ${token}`
             }

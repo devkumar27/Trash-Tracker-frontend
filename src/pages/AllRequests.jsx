@@ -26,7 +26,7 @@ const AllRequests = () => {
     const updateStatus = async () => {
         console.log("inside updateStatus")
         const token = cookies.token;
-        const res = await axios.patch('http://localhost:4000/request/update',
+        const res = await axios.patch('https://trash-tracker-gb4c.onrender.com/request/update',
             {},
             {
                 headers: {
@@ -48,7 +48,7 @@ const AllRequests = () => {
 
     const fetchComplaints = async () => {
         const token = cookies.token;
-        const res = await axios.get('http://localhost:4000/request/all', {
+        const res = await axios.get('https://trash-tracker-gb4c.onrender.com/request/all', {
             headers: {
                 Authorization: `Bearer ${token}`
             }

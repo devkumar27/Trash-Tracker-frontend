@@ -34,7 +34,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/signup",
+        "hhttps://trash-tracker-gb4c.onrender.com/signup",
         {
           ...inputValue,
         },

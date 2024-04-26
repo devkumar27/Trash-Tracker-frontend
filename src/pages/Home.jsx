@@ -21,7 +21,7 @@ const Home = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:4000",
+        "https://trash-tracker-gb4c.onrender.com",
         {},
         { withCredentials: true }
       );
